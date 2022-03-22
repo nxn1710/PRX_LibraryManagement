@@ -10,5 +10,20 @@ public class MainController {
 	public String main() {
 		return "index";
 	}
+	
+	@GetMapping("/list")
+	public String list() {
+		return "list";
+	}
+	
+	@GetMapping("/add")
+	public String add() {
+		return "add";
+	}
+	
+	@GetMapping("/dashboard")
+	public String dashboard() {
+		return "dashboard";
+	}
 
 }
