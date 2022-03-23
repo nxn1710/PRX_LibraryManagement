@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Member {
 
 	@XmlAttribute(name = "id", required = true)
-    protected String id;
+	protected String id;
 	@XmlElement(name = "name")
 	protected String name;
 	@XmlElement(name = "gender")
@@ -24,7 +24,20 @@ public class Member {
 	protected String email;
 	@XmlElement(name = "address")
 	protected String address;
-	
+
+	public Member() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Member(String name, String gender, String phone, String email, String address) {
+		super();
+		this.name = name;
+		this.gender = gender;
+		this.phone = phone;
+		this.email = email;
+		this.address = address;
+	}
+
 	public String getId() {
 		return id;
 	}
