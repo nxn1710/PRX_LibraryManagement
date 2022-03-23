@@ -6,9 +6,12 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
+import org.springframework.stereotype.Service;
+
 import com.prx.project.library.OjFactory.MemberFactory;
 import com.prx.project.library.model.MemberList;
 
+@Service
 public class MemberDAO {
 
 	public MemberList unmarshalling() {
