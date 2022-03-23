@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<books>
+	<book id="1">
+
+		<title>Agile Web Development with Rails</title>
+		<year>2010</year>
+		<language>en</language>
+		<pages>472</pages>
+		<available>200</available>
+		<thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+		<description></description>
+		<authors>
+			<author id="2">
+				<fullName>Nguyen Chanh</fullName>
+			</author>
+			<author id="3">
+				<fullName>Long Thai Binh</fullName>
+			</author>
+		</authors>
+		<categoryName>Web development</categoryName>
+	</book>
+	<book id="2">
+		<title>Agile Web Development with Rails</title>
+		<year>2021</year>
+		<language>en</language>
+		<pages>3022</pages>
+		<available>4213</available>
+		<thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+		<description></description>
+		<authors>
+			<author id="2">
+				<fullName>Nguyen Chanh</fullName>
+			</author>
+			<author id="3">
+				<fullName>Long Thai Binh</fullName>
+			</author>
+		</authors>
+		<categoryName>Androi development</categoryName>
+	</book>
+</books>

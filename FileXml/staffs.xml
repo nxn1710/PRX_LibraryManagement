@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<staffs>
+	<staff id="1">
+
+		<userName>nguyennhan123</userName>
+		<password>0349769684</password>
+		<fullName>Nguyen Nhan</fullName>
+	</staff>
+	<staff id="2">
+
+		<userName>nguyenchang321</userName>
+		<password>0349769684</password>
+		<fullName>Nguyen Chanh</fullName>
+	</staff>
+	<staff d="3">
+
+		<userName>longtb</userName>
+		<password>0349769684</password>
+		<fullName>Long Thai Binh</fullName>
+	</staff>
+</staffs>

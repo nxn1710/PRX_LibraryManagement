@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<borroweds>
+	<borrowed id="1">
+		<member id="1">
+			<fullName>Nguyen Nhan</fullName>
+			<phoneNumber>0349769684</phoneNumber>
+			<address>Hue</address>
+		</member>
+		<staff id="2">
+			<userName>nguyennhan123</userName>
+			<password>0349769684</password>
+			<fullName>Nguyen Nhan</fullName>
+		</staff>
+		<books>
+			<book id="1">
+
+				<title>Agile Web Development with Rails</title>
+				<year>2010</year>
+				<language>en</language>
+				<pages>472</pages>
+				<available>200</available>
+				<thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+				<description></description>
+				<authors>
+					<author id="2">
+						<fullName>Nguyen Chanh</fullName>
+					</author>
+					<author id="3">
+						<fullName>Long Thai Binh</fullName>
+					</author>
+				</authors>
+				<categoryName>Web development</categoryName>
+			</book>
+			<book id="2">
+				<title>Agile Web Development with Rails</title>
+				<year>2021</year>
+				<language>en</language>
+				<pages>3022</pages>
+				<available>4213</available>
+				<thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+				<description></description>
+				<authors>
+					<author id="2">
+						<fullName>Nguyen Chanh</fullName>
+					</author>
+					<author id="3">
+						<fullName>Long Thai Binh</fullName>
+					</author>
+				</authors>
+				<categoryName>Androi development</categoryName>
+			</book>
+		</books>
+		<borrowedTime>2021/02/20 12:30:21</borrowedTime>
+		<returnDeadline>2021/03/20 12:30:21</returnDeadline>
+		<status>TRUE</status>
+		<returnTime>2021/03/20 12:30:21</returnTime>
+		<totalPrice>200000</totalPrice>
+	</borrowed>
+	<borrowed id="2">
+		<member id="1">
+			<fullName>Nguyen Nhan</fullName>
+			<phoneNumber>0349769684</phoneNumber>
+			<address>Hue</address>
+		</member>
+		<staff id="2">
+			<userName>nguyennhan123</userName>
+			<password>0349769684</password>
+			<fullName>Nguyen Nhan</fullName>
+		</staff>
+		<books>
+			<book id="2">
+				<title>Agile Web Development with Rails</title>
+				<year>2021</year>
+				<language>en</language>
+				<pages>3022</pages>
+				<available>4213</available>
+				<thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+				<description></description>
+				<authors>
+					<author id="2">
+						<fullName>Nguyen Chanh</fullName>
+					</author>
+					<author id="3">
+						<fullName>Long Thai Binh</fullName>
+					</author>
+				</authors>
+				<categoryName>Androi development</categoryName>
+			</book>
+		</books>
+		<borrowedTime>2021/02/20 12:30:21</borrowedTime>
+		<returnDeadline>2021/03/20 12:30:21</returnDeadline>
+		<status>TRUE</status>
+		<returnTime>2021/03/20 12:30:21</returnTime>
+		<totalPrice>200000</totalPrice>
+	</borrowed>
+	<borrowed id="3">
+		<member id="1">
+			<fullName>Nguyen Nhan</fullName>
+			<phoneNumber>0349769684</phoneNumber>
+			<address>Hue</address>
+		</member>
+		<staff id="2">
+			<userName>nguyennhan123</userName>
+			<password>0349769684</password>
+			<fullName>Nguyen Nhan</fullName>
+		</staff>
+		<books>
+			<book id="1">
+
+				<title>Agile Web Development with Rails</title>
+				<year>2010</year>
+				<language>en</language>
+				<pages>472</pages>
+				<available>200</available>
+				<thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+				<description></description>
+				<authors>
+					<author id="2">
+						<fullName>Nguyen Chanh</fullName>
+					</author>
+					<author id="3">
+						<fullName>Long Thai Binh</fullName>
+					</author>
+				</authors>
+				<categoryName>Web development</categoryName>
+			</book>
+		</books>
+		<borrowedTime>2021/02/20 12:30:21</borrowedTime>
+		<returnDeadline>2021/03/20 12:30:21</returnDeadline>
+		<status>TRUE</status>
+		<returnTime>2021/03/20 12:30:21</returnTime>
+		<totalPrice>200000</totalPrice>
+	</borrowed>
+</borroweds>

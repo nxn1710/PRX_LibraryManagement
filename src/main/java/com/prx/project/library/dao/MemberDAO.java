@@ -17,8 +17,9 @@ public class MemberDAO {
 		try {
 			JAXBContext context = JAXBContext.newInstance(MemberFactory.class);
 			Unmarshaller unmarshaller = context.createUnmarshaller();
-			File file = new File("D:\\Study\\CN8\\PRX\\PRX_LibraryManagement\\FileXml\\member.xml");
+			File file = new File("/Users/sonit/Documents/workspace-spring-tool-suite-4-4.14.0.RELEASE/PRX_LibraryManagement/FileXml/member.xml");
 			members = (MemberList) unmarshaller.unmarshal(file);
+			System.out.println("Members: " + members);
 		} catch (JAXBException ex) {
 			ex.printStackTrace();
 		}
