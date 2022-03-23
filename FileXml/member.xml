@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<member_list>
+    <member id="1">
+        <name>Bui Viet Hoang</name>
+        <gender>Male</gender>
+        <phone>0984323543</phone>
+        <email>hoangbv@gmail.com</email>
+        <address>Xuan Dinh - Tu Liem - Ha Noi</address>            
+    </member>
+</member_list>
