@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<book_list>
+    <book id="1">
+        <title>Bui Viet Hoang</title>
+        <author>Male</author>
+        <price>321321</price>
+        <description>ABC</description>
+        <category>Seft help</category>
+        <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+    </book>
+</book_list>
