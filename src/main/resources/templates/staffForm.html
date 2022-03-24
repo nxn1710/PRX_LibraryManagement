@@ -22,26 +22,29 @@
 						<div class="row">
 							<div class="col-lg-6" style="margin: 0 auto">
 								<div class="card">
-									<div class="card-header" th:if="${staff.id != null}">
+									<div class="card-header" th:if="${staff.id != '0'}">
 										<strong>Edit Form</strong> Elements
 									</div>
-									<div class="card-header" th:unless="${staff.id != null}">
+									<div class="card-header" th:if="${staff.id == '0'}">
 										<strong>Add Form</strong> Elements
 									</div>
 									<div class="card-body card-block">
-										<form id="form1" action="#" th:action="@{/staffs/new}" th:object="${staff}"
+										<form id="form1" action="#" th:action="@{/staffs/staff-add-edit}" th:object="${staff}"
 											method="post" enctype="multipart/form-data" class="form-horizontal">
+											
+											<input type="text" id="id" th:field="*{id}" name="id" th:value="${staff.id}" hidden = "true">
+											
 											<div class="row form-group">
 												<div class="col col-md-3">
 													<label class=" form-control-label">Email</label>
 												</div>
-												<div class="col-12 col-md-9" th:if="${staff.id != null}">
+												<div class="col-12 col-md-9" th:if="${staff.id != '0'}">
 													<input type="text" id="email" th:field="*{email}"
 														th:value="${staff.email}" placeholder="Email"
 														class="form-control">
 													<small style="color: red;" id="email-error"></small>
 												</div>
-												<div class="col-12 col-md-9" th:unless="${staff.id != null}">
+												<div class="col-12 col-md-9" th:unless="${staff.id != '0'}">
 													<input type="text" id="email" th:field="*{email}"
 														placeholder="Email" class="form-control">
 													<small style="color: red;" id="email-error"></small>
@@ -51,15 +54,14 @@
 												<div class="col col-md-3">
 													<label for="text-input" class=" form-control-label">Password</label>
 												</div>
-												<div class="col-12 col-md-7" th:if="${staff.id != null}">
+												<div class="col-12 col-md-7" th:if="${staff.id != '0'}">
 													<input type="text" id="password" th:field="*{password}"
-														th:value="${staff.password}" placeholder="Password"
-														class="form-control" style="width: 115%;" disabled>
+														th:value="${staff.password}" name="password" placeholder="Password"
+														class="form-control" style="width: 115%;">
 												</div>
-												<div class="col-12 col-md-7" th:unless="${staff.id != null}">
-													<input type="text" id="password" th:field="*{password}"
-														placeholder="Password" class="form-control" style="width: 115%;"
-														disabled>
+												<div class="col-12 col-md-7" th:unless="${staff.id != '0'}">
+													<input type="text" id="password" th:field="*{password}" name="password"
+														placeholder="Password" class="form-control" style="width: 115%;">
 												</div>
 												<div class="col-12 col-md-2"
 													style="display: flex; justify-content: end;">
@@ -74,13 +76,13 @@
 													<label for="email-input" class=" form-control-label">Full
 														Name</label>
 												</div>
-												<div class="col-12 col-md-9" th:if="${staff.id != null}">
+												<div class="col-12 col-md-9" th:if="${staff.id != '0'}">
 													<input type="email" id="full-name" th:field="*{fullName}"
 														th:value="${staff.fullName}" placeholder="Full Name"
 														class="form-control">
 													<small style="color: red;" id="full-name-error"></small>
 												</div>
-												<div class="col-12 col-md-9" th:unless="${staff.id != null}">
+												<div class="col-12 col-md-9" th:unless="${staff.id != '0'}">
 													<input type="email" id="full-name" th:field="*{fullName}"
 														placeholder="Full Name" class="form-control">
 													<small style="color: red;" id="full-name-error"></small>
@@ -111,12 +113,12 @@
 												<div class="col col-md-3">
 													<label for="disabled-input" class=" form-control-label">Age</label>
 												</div>
-												<div class="col-12 col-md-9" th:if="${staff.id != null}">
+												<div class="col-12 col-md-9" th:if="${staff.id != '0'}">
 													<input type="number" id="age" th:field="*{age}"
 														th:value="${staff.age}" placeholder="Age" class="form-control">
 													<small style="color: red;" id="age-error"></small>
 												</div>
-												<div class="col-12 col-md-9" th:unless="${staff.id != null}">
+												<div class="col-12 col-md-9" th:unless="${staff.id != '0'}">
 													<input type="number" id="age" th:field="*{age}" placeholder="Age"
 														class="form-control">
 													<small style="color: red;" id="age-error"></small>
@@ -127,13 +129,13 @@
 													<label for="disabled-input"
 														class=" form-control-label">Phone</label>
 												</div>
-												<div class="col-12 col-md-9" th:if="${staff.id != null}">
+												<div class="col-12 col-md-9" th:if="${staff.id != '0'}">
 													<input type="text" id="phone" th:field="*{phone}"
 														th:value="${staff.age}" placeholder="Phone"
 														class="form-control">
 													<small style="color: red;" id="phone-error"></small>
 												</div>
-												<div class="col-12 col-md-9" th:unless="${staff.id != null}">
+												<div class="col-12 col-md-9" th:unless="${staff.id != '0'}">
 													<input type="text" id="phone" th:field="*{phone}"
 														placeholder="Phone" class="form-control">
 													<small style="color: red;" id="phone-error"></small>
@@ -144,13 +146,13 @@
 													<label for="disabled-input"
 														class=" form-control-label">Address</label>
 												</div>
-												<div class="col-12 col-md-9" th:if="${staff.id != null}">
+												<div class="col-12 col-md-9" th:if="${staff.id != '0'}">
 													<input type="text" id="address" th:field="*{address}"
 														th:value="${staff.address}" placeholder="Address"
 														class="form-control">
 													<small style="color: red;" id="address-error"></small>
 												</div>
-												<div class="col-12 col-md-9" th:unless="${staff.id != null}">
+												<div class="col-12 col-md-9" th:unless="${staff.id != '0'}">
 													<input type="text" id="address" th:field="*{address}"
 														placeholder="Address" class="form-control">
 													<small style="color: red;" id="address-error"></small>
@@ -159,11 +161,11 @@
 										</form>
 									</div>
 									<div class="card-footer">
-										<button th:if="${staff.id != null}" type="submit" class="btn btn-primary btn-sm"
+										<button th:if="${staff.id != '0'}" type="submit" class="btn btn-primary btn-sm"
 											id="btn-submit-form">
 											<i class="fa fa-dot-circle-o"></i> Edit
 										</button>
-										<button th:unless="${staff.id != null}" type="submit"
+										<button th:if="${staff.id == '0'}" type="submit"
 											class="btn btn-primary btn-sm" id="btn-submit-form">
 											<i class="fa fa-dot-circle-o"></i> Add
 										</button>

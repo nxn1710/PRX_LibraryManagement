@@ -1,6 +1,7 @@
 package com.prx.project.library.dao;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class StaffDAO {
 		try {
 			JAXBContext context = JAXBContext.newInstance(StaffFactory.class);
 			Unmarshaller unmarshaller = context.createUnmarshaller();
-			File file = new File("/Users/sonit/Documents/workspace-spring-tool-suite-4-4.14.0.RELEASE/PRX_LibraryManagement/FileXml/staffs.xml");
+			File file = new File("FileXml/staffs.xml");
 			staffs = (StaffList) unmarshaller.unmarshal(file);
 		} catch (JAXBException ex) {
 			ex.printStackTrace();
@@ -39,7 +40,7 @@ public class StaffDAO {
 			JAXBContext context = JAXBContext.newInstance(StaffFactory.class);
 			Marshaller marshaller = context.createMarshaller();
 
-			File file = new File("/Users/sonit/Documents/workspace-spring-tool-suite-4-4.14.0.RELEASE/PRX_LibraryManagement/FileXml/staffs.xml");
+			File file = new File("FileXml/staffs.xml");
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			marshaller.marshal(staffList, file);
 
@@ -69,9 +70,12 @@ public class StaffDAO {
 	public void insertStaff(Staff staff) {
 
 		StaffList staffList = this.unmarshalling();
-
-		Staff maxIdStaff = staffList.getStaffs().stream().max(Comparator.comparing(String::valueOf)).get();
-		System.err.println("maxIdStaff " + maxIdStaff.getEmail());
+		Staff maxIdStaff = null;
+		if (staffList.getStaffs() != null) {
+			maxIdStaff = staffList.getStaffs().stream().max(Comparator.comparing(String::valueOf)).get();
+		}else {
+			staffList.setStaffs(new ArrayList<>());
+		}
 		int maxId = 0;
 		if (maxIdStaff != null) {
 			maxId = Integer.parseInt(maxIdStaff.getId());
@@ -96,7 +100,7 @@ public class StaffDAO {
 
 		for (Staff s : staffList.getStaffs()) {
 			if (staff.getId().equals(s.getId())) {
-				s.setEmail(staff.getEmail());;
+				s.setEmail(staff.getEmail());
 				s.setPassword(staff.getPassword());
 				s.setFullName(staff.getFullName());
 				s.setGender(staff.getGender());

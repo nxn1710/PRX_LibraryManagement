@@ -44,7 +44,7 @@
 											<i class="zmdi zmdi-filter-list"></i>filters</button>
 									</div>
 									<div class="table-data__tool-right">
-										<a href="@{/staffs/mew}"><button
+										<a th:href="@{/staffs/staff-add-edit/0}"><button
 												class="au-btn au-btn-icon au-btn--green au-btn--small">
 												<i class="zmdi zmdi-plus"></i>add item</button></a>
 
@@ -62,7 +62,7 @@
 												<th>User Name</th>
 												<th>Full Name</th>
 												<th>Gender</th>
-												<th>>Age</th>
+												<th>Age</th>
 												<th>Phone</th>
 												<th>Address</th>
 												<th></th>
@@ -78,14 +78,14 @@
 												<td th:text="${staff.address}"></td>
 												<td>
 													<div class="table-data-feature">
-														<a th:href="@{'/staffs/' + ${staff.id}}"><button class="item"
+														<a th:href="@{'/staffs/staff-add-edit/' + ${staff.id}}"><button class="item"
 																data-toggle="tooltip" data-placement="top" title="Edit">
 															</button> </a>
-														<form method="POST" th:action="@{staffs/delete/} + ${staff.id}">
+														<a th:href="@{'/staffs/delete/' + ${staff.id}}">
 															<button class="item" data-toggle="tooltip"
 																data-placement="top" title="Delete">
 																<i class="zmdi zmdi-delete"></i>
-															</button></form>
+															</button></a>
 													</div>
 												</td>
 										</tbody>
@@ -110,5 +110,4 @@
 	</div>
 
 	<div th:replace='component/script :: html_script'></div>
-
 </body>

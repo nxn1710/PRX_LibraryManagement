@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,44 +22,42 @@ public class StaffControler {
 	@Autowired
 	private StaffDAO staffDAO;
 
-	@GetMapping("/")
+	@GetMapping({ "/", "" })
 	public String getAllStaffs(Model model) {
 		List<Staff> staffList = staffDAO.getAllStaff();
 		model.addAttribute("staffList", staffList);
 		return "staffList";
 	}
-	
-	@GetMapping("/{id}")
-	public String getStaff(@PathVariable("id") String  id, Model model) {
-		Staff staff = staffDAO.getStaff(id);
+
+	@GetMapping("/staff-add-edit/{id}")
+	public String getStaff(@PathVariable("id") String id, Model model) {
+		Staff staff = new Staff();
+		if (!"0".equals(id)) {
+			staff = staffDAO.getStaff(id);
+		} else {
+			staff.setId("0");
+		}
+
 		model.addAttribute("staff", staff);
 		return "staffForm";
 	}
 
-	@GetMapping("/new")
-	public String redirectStaffForm(Model model) {
-		model.addAttribute("staff", new Staff());
-		return "staffForm";
+	@PostMapping("/staff-add-edit")
+	public String newStaff(@ModelAttribute("staff") Staff staff, Model model) {
+		model.addAttribute("staff", staff);
+
+ 		if ("0".equals(staff.getId())) {
+			staffDAO.insertStaff(staff);
+		} else {
+			staffDAO.updateStaff(staff);
+		}
+
+		return "redirect:/staffs";
 	}
 
-	@PostMapping("/new")
-	public String newStaff(@ModelAttribute Staff staff,Model model) {
-		model.addAttribute("staff", staff);
-		staffDAO.insertStaff(staff);
-		return "staffList";
-	}
-	
-	@PostMapping("/update")
-	public String updateStaff(@ModelAttribute Staff staff,Model model) {
-		model.addAttribute("staff", staff);
-		staffDAO.updateStaff(staff);
-		return "staffList";
-	}
-	
-	@PostMapping("/delete")
-	public String deleteStaff(@ModelAttribute Staff staff, Model model) {
-		model.addAttribute("staff", staff);
-		staffDAO.deleteStaff(staff.getId());
-		return "staffList";
+	@GetMapping("/delete/{id}")
+	public String deleteStaff(@PathVariable("id") String id, Model model) {
+		staffDAO.deleteStaff(id);
+		return "redirect:/staffs";
 	}
 }
