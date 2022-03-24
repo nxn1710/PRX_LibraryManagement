@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<staff_list>
+	<staff id="1">
+
+		<email>nguyennhan123</email>
+		<password>0349769684</password>
+		<fullName>Nguyen Nhan</fullName>
+		<gender>Nguyen Nhan</gender>
+		<age>Nguyen Nhan</age>
+		<phone>
+			1234213
+		</phone>
+		<address>
+			Quang Binh
+		</address>
+	</staff>
+	<staff id="2">
+
+		<email>nguyenchang321</email>
+		<password>0349769684</password>
+		<fullName>Nguyen Chanh</fullName>
+		<age>Nguyen Nhan</age>
+		<phone>
+			1234213
+		</phone>
+		<address>
+			Quang Binh
+		</address>
+	</staff>
+	<staff id="3">
+		<email>longtb</email>
+		<password>0349769684</password>
+		<fullName>Long Thai Binh</fullName>
+		<age>Nguyen Nhan</age>
+		<phone>
+			1234213
+		</phone>
+		<address>
+			Quang Binh
+		</address>
+	</staff>
+</staff_list>
