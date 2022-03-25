@@ -23,13 +23,13 @@
 							<div class="col-lg-6" style="margin: 0 auto">
 								<div class="card">
 									<div class="card-header" th:if="${staff.id != '0'}">
-										<strong>Edit Form</strong> Elements
+										<strong>Edit Form</strong>
 									</div>
 									<div class="card-header" th:if="${staff.id == '0'}">
-										<strong>Add Form</strong> Elements
+										<strong>Add Form</strong>
 									</div>
 									<div class="card-body card-block">
-										<form id="form1" action="#" th:action="@{/staffs/staff-add-edit}"
+										<form id="formStaff" action="#" th:action="@{/staffs/staff-add-edit}"
 											th:object="${staff}" method="post" enctype="multipart/form-data"
 											class="form-horizontal">
 
@@ -216,12 +216,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
-								<div class="copyright">
-									<p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
-											href="https://colorlib.com">Colorlib</a>.</p>
-								</div>
-							</div>
+							<div th:replace='component/footer :: html_footer'></div>
+
 						</div>
 					</div>
 				</div>
@@ -278,31 +274,29 @@
 				let phone = $("#phone").val();
 				let age = $("#age").val();
 				let password = $("#password").val();
-				let checkEmail = true;
-				let checkPhone = true;
-				let checkAge = true;
-				let checkPassword = true;
+				let checkSubmitForm = true;
 				// Validate email
 				if (!email) {
 					$("#email").css("border", "1px solid red");
 					$("#email-error").html("Please enter your email").css("color", "red !important")
+					checkSubmitForm = false
 				} else if (!validateEmail(email) || !email) {
 					$("#email").css("border", "1px solid red");
 					$("#email-error").html("Please enter email address in correct format\nexample@gmail.com").css("color", "red !important")
-					checkEmail = false
+					checkSubmitForm = false
 				}
 				// Validate email
 				if (!password) {
 					$("#password").css("border", "1px solid red");
 					$("#password-error").html("Please generate password").css("color", "red !important")
-					checkPassword = false
+					checkSubmitForm = false
 				}
 				// Validate age
 				if (age) {
 					if ((age <= 0 || age > 100)) {
 						$("#age").css("border", "1px solid red");
 						$("#age-error").html("Please enter age greater than 0 and less than 100")
-						checkAge = false
+						checkSubmitForm = false
 					}
 				}
 				// Validate phone
@@ -310,14 +304,15 @@
 					if (!validatePhone(phone)) {
 						$("#phone").css("border", "1px solid red");
 						$("#phone-error").html("Please enter correct format phone number").css("color", "red !important")
-						checkPhone = false
+						checkSubmitForm = false
 					}
 				}
-				if (!checkEmail || !checkPhone || !checkAge || !checkPassword) {
-					console.log("Submit fail")
-				} else {
-					$("#form1").submit()
+				if (checkSubmitForm) {
+					$("#formStaff").submit()
 					console.log("Submit success")
+				} else {
+					console.log("Submit fail")
+
 				}
 
 			});
@@ -325,6 +320,8 @@
 				e.preventDefault();
 				let randomstring = Math.random().toString(36).slice(-8);
 				$("#password").val(randomstring);
+				$("#password").css("border", "1px solid #ced4da");
+				$("#password-error").html("")
 			});
 			$("#btn-reset").click(function (e) {
 				e.preventDefault();
@@ -338,11 +335,10 @@
 				$("#email-error").html("")
 				$("#age-error").html("")
 				$("#phone-error").html("")
-				$("#password").html("")
+				$("#password-error").html("")
 				$("#email").css("border", "1px solid #ced4da");
 				$("#phone").css("border", "1px solid #ced4da");
 				$("#age").css("border", "1px solid #ced4da");
-				$("#password-error").css("border", "1px solid #ced4da");
 
 			});
 		}

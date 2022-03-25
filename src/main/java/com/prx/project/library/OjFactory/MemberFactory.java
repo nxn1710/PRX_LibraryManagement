@@ -13,6 +13,7 @@ public class MemberFactory {
 	private final static QName name_QNAME = new QName("", "name");
 	private final static QName gender_QNAME = new QName("", "gender");
 	private final static QName phone_QNAME = new QName("", "phone");
+	private final static QName age_QNAME = new QName("", "age");
 	private final static QName email_QNAME = new QName("", "email");
 	private final static QName address_QNAME = new QName("", "address");
 
@@ -40,6 +41,10 @@ public class MemberFactory {
 	@XmlElementDecl(namespace = "", name = "phone")
 	public JAXBElement<String> createPhone(String value) {
 		return new JAXBElement<String>(phone_QNAME, String.class, null, value);
+	}
+	@XmlElementDecl(namespace = "", name = "age")
+	public JAXBElement<String> createAge(String value) {
+		return new JAXBElement<String>(age_QNAME, String.class, null, value);
 	}
 
 	@XmlElementDecl(namespace = "", name = "email")

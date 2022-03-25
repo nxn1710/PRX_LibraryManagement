@@ -32,4 +32,11 @@
         <category>Action</category>
         <thumbnail></thumbnail>
     </book>
+    <book id="3">
+        <title>dsad</title>
+        <author>Bui Viet Hoang</author>
+        <price></price>
+        <description></description>
+        <category>Action</category>
+    </book>
 </book_list>
