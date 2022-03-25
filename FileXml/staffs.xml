@@ -2,40 +2,12 @@
 <staff_list>
     <staff id="1">
         <email>nguyennhan12@gmail</email>
+        <password>123123</password>
         <fullName>Nguyen Nhan</fullName>
         <gender>male</gender>
         <age></age>
         <phone>0349769684</phone>
         <address>63c Thanh Niên</address>
     </staff>
-    <staff id="2">
-        <email>nguyenchang321@gmail.com</email>
-        <fullName>Nguyen Chanh</fullName>
-        <gender>female</gender>
-        <age></age>
-        <phone>0349769684</phone>
-        <address>63c Thanh Niên</address>
-    </staff>
-    <staff id="2">
-        <email>leson2602@gmail.com</email>
-        <fullName></fullName>
-        <gender>female</gender>
-        <age></age>
-        <phone>0349769684</phone>
-        <address>63c Thanh Niên</address>
-    </staff>
-    <staff id="3">
-        <email></email>
-        <fullName></fullName>
-        <age></age>
-        <phone></phone>
-        <address></address>
-    </staff>
-    <staff id="3">
-        <email>dsfs@gmail.com</email>
-        <fullName></fullName>
-        <age></age>
-        <phone></phone>
-        <address></address>
-    </staff>
+
 </staff_list>
