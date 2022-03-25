@@ -148,12 +148,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
-								<div class="copyright">
-									<p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
-											href="https://colorlib.com">Colorlib</a>.</p>
-								</div>
-							</div>
+							<div th:replace='component/footer :: html_footer'></div>
+
 						</div>
 					</div>
 				</div>
@@ -168,11 +164,13 @@
 
 			$("#title").blur(function () {
 				let title = $("#title").val();
-				// Validate email
-				console.log(title)
+				// Validate title
 				if (!title) {
 					$("#title").css("border", "1px solid red");
 					$("#title-error").html("Please enter book title").css("color", "red !important")
+				} else {
+					$("#title").css("border", "1px solid #ced4da");
+					$("#title-error").html("")
 				}
 			});
 
@@ -200,8 +198,9 @@
 				$("#author").val(null);
 				$("#category").val(null);
 				$("#thumbnail").val(null);
-				$("#title").html("")
 				$("#title").css("border", "1px solid #ced4da");
+				$("#title-error").html("")
+
 			});
 		}
 

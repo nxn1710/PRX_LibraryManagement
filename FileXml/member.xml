@@ -1,15 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <member_list>
     <member id="1">
         <name>Bui Viet Hoang</name>
-        <gender>Male</gender>
+        <gender>male</gender>
         <phone>0984323543</phone>
+        <email></email>
+        <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+    </member>
+    <member id="2">
+        <name>Bui Viet Hoang</name>
+        <gender>female</gender>
+        <phone>0984323543</phone>
+        <age>10</age>
         <email>hoangbv@gmail.com</email>
-        <address>Xuan Dinh - Tu Liem - Ha Noi</address>            
+        <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+    </member>
+    <member id="3">
+        <name>Le Duc Son</name>
+        <phone>0349769684</phone>
+        <email>leson2602@gmail.com</email>
+        <address>63c Thanh Niên</address>
+    </member>
+    <member id="2">
+        <name>NXN</name>
+        <gender>male</gender>
+        <phone>0349769684</phone>
+        <age>10</age>
+        <email>leson2602@gmail.com</email>
+        <address>63c Thanh Niên</address>
     </member>
 </member_list>

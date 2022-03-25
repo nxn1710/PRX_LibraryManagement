@@ -100,6 +100,7 @@ public class MemberDAO {
 				m.setGender(member.getGender());
 
 				m.setPhone(member.getPhone());
+				m.setAge(member.getAge());
 
 				m.setEmail(member.getEmail());
 

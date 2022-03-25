@@ -29,7 +29,7 @@
 										<strong>Add Form</strong>
 									</div>
 									<div class="card-body card-block">
-										<form id="form1" action="#" th:action="@{/members/member-add-edit}"
+										<form id="formMember" action="#" th:action="@{/members/member-add-edit}"
 											th:object="${member}" method="post" enctype="multipart/form-data"
 											class="form-horizontal">
 
@@ -69,16 +69,52 @@
 
 											</div>
 
-											<div class=" row form-group">
+											<div class="row form-group">
 												<div class="col col-md-3">
 													<label class=" form-control-label">Gender</label>
 												</div>
-												<div class="col col-md-9">
+
+												<div class="col col-md-9" th:if="${member.id != '0'}">
+													<div class="form-check">
+														<div th:if="${member.gender == 'male'}">
+															<div class="radio1">
+																<label class="form-check-label ">
+																	<input type="radio" id="gender" th:field="*{gender}"
+																		value="male" th:checked="true"
+																		class="form-check-input">Male
+																</label>
+															</div>
+															<div class="radio2">
+																<label class="form-check-label ">
+																	<input type="radio" id="gender" th:field="*{gender}"
+																		value="female" class="form-check-input">Female
+																</label>
+															</div>
+														</div>
+														<div th:if="${member.gender == 'female'}">
+															<div class="radio1">
+																<label class="form-check-label ">
+																	<input type="radio" id="gender" th:field="*{gender}"
+																		value="male" class="form-check-input">Male
+																</label>
+															</div>
+															<div class="radio2">
+																<label class="form-check-label ">
+																	<input type="radio" id="gender" th:field="*{gender}"
+																		value="female" th:checked="true"
+																		class="form-check-input">Female
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col col-md-9" th:unless="${member.id != '0'}">
 													<div class="form-check">
 														<div class="radio">
 															<label for="radio1" class="form-check-label ">
 																<input type="radio" id="gender" th:field="*{gender}"
-																	value="male" class="form-check-input">Male
+																	value="male" th:checked="true"
+																	class="form-check-input">Male
 															</label>
 														</div>
 														<div class="radio">
@@ -90,7 +126,21 @@
 													</div>
 												</div>
 											</div>
-
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="disabled-input" class=" form-control-label">Age</label>
+												</div>
+												<div class="col-12 col-md-9" th:if="${member.id != '0'}">
+													<input type="number" id="age" th:field="*{age}"
+														th:value="${member.age}" placeholder="Age" class="form-control">
+													<small style="color: red;" id="age-error"></small>
+												</div>
+												<div class="col-12 col-md-9" th:unless="${member.id != '0'}">
+													<input type="number" id="age" th:field="*{age}" placeholder="Age"
+														class="form-control">
+													<small style="color: red;" id="age-error"></small>
+												</div>
+											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
 													<label for="disabled-input"
@@ -142,12 +192,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
-								<div class="copyright">
-									<p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
-											href="https://colorlib.com">Colorlib</a>.</p>
-								</div>
-							</div>
+							<div th:replace='component/footer :: html_footer'></div>
+
 						</div>
 					</div>
 				</div>
@@ -170,19 +216,31 @@
 		}
 		function validateInput() {
 
-			$("#email").change(function () {
+			$("#email").blur(function () {
 				let email = $("#email").val();
+				if (!email) {
+					$("#email").css("border", "1px solid red");
+					$("#email-error").html("Please enter your email").css("color", "red !important")
+				}
 				// Validate email
-				if (validateEmail(email) || email === "") {
+				if (validateEmail(email)) {
 					$("#email").css("border", "1px solid #ced4da");
 					$("#email-error").html("")
 				}
 			});
 
+			$("#age").change(function () {
+				let age = $("#age").val();
+				// Validate age
+				if ((age >= 0 && age <= 100) || !age) {
+					$("#age").css("border", "1px solid #ced4da");
+					$("#age-error").html("")
+				}
+			})
 			$("#phone").change(function () {
 				let phone = $("#phone").val();
 				// Validate phone
-				if (validatePhone(phone) || phone === "") {
+				if (validatePhone(phone) || !phone) {
 					$("#phone").css("border", "1px solid #ced4da");
 					$("#phone-error").html("")
 				}
@@ -191,36 +249,56 @@
 			$("#btn-submit-form").click(function () {
 				let email = $("#email").val();
 				let phone = $("#phone").val();
-				let checkEmail = true;
-				let checkPhone = true;
+				let age = $("#age").val();
+				let checkSubmitForm = true;
 				// Validate email
-				if (!validateEmail(email) || !email) {
+				if (!email) {
+					$("#email").css("border", "1px solid red");
+					$("#email-error").html("Please enter your email").css("color", "red !important")
+					checkSubmitForm = false
+				} else if (!validateEmail(email) || !email) {
 					$("#email").css("border", "1px solid red");
 					$("#email-error").html("Please enter email address in correct format\nexample@gmail.com").css("color", "red !important")
-					checkEmail = false
+					checkSubmitForm = false
+				}
+				// Validate age
+				if (age) {
+					if ((age <= 0 || age > 100)) {
+						$("#age").css("border", "1px solid red");
+						$("#age-error").html("Please enter age greater than 0 and less than 100")
+						checkSubmitForm = false
+					}
 				}
 				// Validate phone
 				if (phone) {
 					if (!validatePhone(phone)) {
 						$("#phone").css("border", "1px solid red");
 						$("#phone-error").html("Please enter correct format phone number").css("color", "red !important")
-						checkPhone = false
+						checkSubmitForm = false
 					}
 				}
-				if (!checkEmail || !checkPhone) {
-					console.log("Submit fail")
-				} else {
-					$("#form1").submit()
+				console.log(checkSubmitForm)
+				if (checkSubmitForm) {
 					console.log("Submit success")
+					$("#formMember").submit()
+				} else {
+					console.log("Submit fail")
+
 				}
 
 			});
-
+			$("#generate-password").click(function (e) {
+				e.preventDefault();
+				let randomstring = Math.random().toString(36).slice(-8);
+				$("#password").val(randomstring);
+				$("#password").css("border", "1px solid #ced4da");
+				$("#password-error").html("")
+			});
 			$("#btn-reset").click(function (e) {
 				e.preventDefault();
 				$("#email").val(null);
 				$("#password").val(null);
-				$("#full-name").val(null);
+				$("#name").val(null);
 				$("#gender").val(null);
 				$("#phone").val(null);
 				$("#address").val(null);
@@ -228,6 +306,7 @@
 				$("#phone-error").html("")
 				$("#email").css("border", "1px solid #ced4da");
 				$("#phone").css("border", "1px solid #ced4da");
+
 			});
 		}
 		validateInput();

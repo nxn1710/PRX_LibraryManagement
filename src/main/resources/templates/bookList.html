@@ -46,7 +46,7 @@
 									<div class="table-data__tool-right">
 										<a th:href="@{/books/book-add-edit/0}"><button
 												class="au-btn au-btn-icon au-btn--green au-btn--small">
-												<i class="zmdi zmdi-plus"></i>add item</button></a>
+												<i class="zmdi zmdi-plus"></i>add book</button></a>
 
 									</div>
 								</div>
@@ -79,7 +79,7 @@
 														<a th:href="@{'/books/book-add-edit/' + ${book.id}}"><button
 																class="item" data-toggle="tooltip" data-placement="top"
 																title="Edit">
-															   <i class="zmdi zmdi-edit"></i></button> </a>
+																<i class="zmdi zmdi-edit"></i></button> </a>
 														<a th:href="@{'/books/delete/' + ${book.id}}">
 															<button class="item" data-toggle="tooltip"
 																data-placement="top" title="Delete">
@@ -93,14 +93,8 @@
 								<!-- END DATA TABLE-->
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="copyright">
-									<p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
-											href="https://colorlib.com">Colorlib</a>.</p>
-								</div>
-							</div>
-						</div>
+						<div th:replace='component/footer :: html_footer'></div>
+
 					</div>
 				</div>
 			</div>

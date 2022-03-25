@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "name", "gender", "phone", "email", "address" })
+@XmlType(name = "", propOrder = { "id", "name", "gender", "phone", "age", "email", "address" })
 @XmlRootElement(name = "member")
 public class Member {
 
@@ -20,20 +20,24 @@ public class Member {
 	protected String gender;
 	@XmlElement(name = "phone")
 	protected String phone;
+	@XmlElement(name = "age")
+	protected Integer age;
 	@XmlElement(name = "email")
 	protected String email;
 	@XmlElement(name = "address")
 	protected String address;
 
 	public Member() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 
-	public Member(String name, String gender, String phone, String email, String address) {
+	public Member(String id, String name, String gender, String phone, Integer age, String email, String address) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.gender = gender;
 		this.phone = phone;
+		this.age = age;
 		this.email = email;
 		this.address = address;
 	}
@@ -68,6 +72,14 @@ public class Member {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	public String getEmail() {
