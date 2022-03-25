@@ -24,7 +24,7 @@ public class BookDAO {
 		try {
 			JAXBContext context = JAXBContext.newInstance(BookFactory.class);
 			Unmarshaller unmarshaller = context.createUnmarshaller();
-			File file = new File("D:\\Study\\CN8\\PRX\\PRX_LibraryManagement\\FileXml\\book.xml");
+			File file = new File("FileXml/book.xml");
 			books = (BookList) unmarshaller.unmarshal(file);
 		} catch (JAXBException ex) {
 			ex.printStackTrace();
@@ -39,7 +39,7 @@ public class BookDAO {
 			JAXBContext context = JAXBContext.newInstance(BookFactory.class);
 			Marshaller marshaller = context.createMarshaller();
 
-			File file = new File("D:\\Study\\CN8\\PRX\\PRX_LibraryManagement\\FileXml\\book.xml");
+			File file = new File("FileXml/book.xml");
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			marshaller.marshal(bookList, file);
 
@@ -109,7 +109,7 @@ public class BookDAO {
 
 	}
 
-	public void deleteMember(String bookId) {
+	public void deleteBook(String bookId) {
 
 		BookList bookList = this.unmarshalling();
 

@@ -21,7 +21,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-12">
-								<h3 class="title-5 m-b-35">Staff</h3>
+								<h3 class="title-5 m-b-35">Member</h3>
 								<div class="table-data__tool">
 									<div class="table-data__tool-left">
 										<div class="rs-select2--light rs-select2--md">
@@ -44,7 +44,7 @@
 											<i class="zmdi zmdi-filter-list"></i>filters</button>
 									</div>
 									<div class="table-data__tool-right">
-										<a th:href="@{/staffs/staff-add-edit/0}"><button
+										<a th:href="@{/members/member-add-edit/0}"><button
 												class="au-btn au-btn-icon au-btn--green au-btn--small">
 												<i class="zmdi zmdi-plus"></i>add item</button></a>
 
@@ -59,30 +59,27 @@
 									<table class="table table-borderless table-data3">
 										<thead>
 											<tr>
-												<th>Email</th>
-												<th>Full Name</th>
+												<th>Name</th>
 												<th>Gender</th>
-												<th>Age</th>
 												<th>Phone</th>
+												<th>Email</th>
 												<th>Address</th>
 												<th></th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr th:each="staff : ${staffList}">
-												<td th:text="${staff.email}"></td>
-												<td th:text="${staff.fullName}"></td>
-												<td th:text="${staff.gender}"></td>
-												<td th:text="${staff.age}"></td>
-												<td th:text="${staff.phone}"></td>
-												<td th:text="${staff.address}"></td>
+											<tr th:each="member : ${memberList}">
+												<td th:text="${member.name}"></td>
+												<td th:text="${member.gender}"></td>
+												<td th:text="${member.phone}"></td>
+												<td th:text="${member.email}"></td>
+												<td th:text="${member.address}"></td>
 												<td>
 													<div class="table-data-feature">
-														<a th:href="@{'/staffs/staff-add-edit/' + ${staff.id}}"><button
-																class="item" data-toggle="tooltip" data-placement="top"
-																title="Edit">
-																<i class="zmdi zmdi-edit"></i></button> </a>
-														<a th:href="@{'/staffs/delete/' + ${staff.id}}">
+														<a th:href="@{'/members/member-add-edit/' + ${member.id}}"><button class="item"
+																data-toggle="tooltip" data-placement="top" title="Edit">
+															   <i class="zmdi zmdi-edit"></i></button> </a>
+														<a th:href="@{'/members/delete/' + ${member.id}}">
 															<button class="item" data-toggle="tooltip"
 																data-placement="top" title="Delete">
 																<i class="zmdi zmdi-delete"></i>

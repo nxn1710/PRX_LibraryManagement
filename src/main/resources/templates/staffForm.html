@@ -29,11 +29,13 @@
 										<strong>Add Form</strong> Elements
 									</div>
 									<div class="card-body card-block">
-										<form id="form1" action="#" th:action="@{/staffs/staff-add-edit}" th:object="${staff}"
-											method="post" enctype="multipart/form-data" class="form-horizontal">
-											
-											<input type="text" id="id" th:field="*{id}" name="id" th:value="${staff.id}" hidden = "true">
-											
+										<form id="form1" action="#" th:action="@{/staffs/staff-add-edit}"
+											th:object="${staff}" method="post" enctype="multipart/form-data"
+											class="form-horizontal">
+
+											<input type="text" id="id" th:field="*{id}" name="id" th:value="${staff.id}"
+												hidden="true">
+
 											<div class="row form-group">
 												<div class="col col-md-3">
 													<label class=" form-control-label">Email</label>
@@ -56,12 +58,16 @@
 												</div>
 												<div class="col-12 col-md-7" th:if="${staff.id != '0'}">
 													<input type="text" id="password" th:field="*{password}"
-														th:value="${staff.password}" name="password" placeholder="Password"
-														class="form-control" style="width: 115%;">
+														th:value="${staff.password}" name="password"
+														placeholder="Password" disabled class="form-control"
+														style="width: 110%;">
+													<small style="color: red;" id="password-error"></small>
 												</div>
 												<div class="col-12 col-md-7" th:unless="${staff.id != '0'}">
-													<input type="text" id="password" th:field="*{password}" name="password"
-														placeholder="Password" class="form-control" style="width: 115%;">
+													<input type="text" id="password" th:field="*{password}"
+														name="password" placeholder="Password" class="form-control"
+														style="width: 110%;" disabled>
+													<small style="color: red;" id="password-error"></small>
 												</div>
 												<div class="col-12 col-md-2"
 													style="display: flex; justify-content: end;">
@@ -92,12 +98,47 @@
 												<div class="col col-md-3">
 													<label class=" form-control-label">Gender</label>
 												</div>
-												<div class="col col-md-9">
+												<div class="col col-md-9" th:if="${staff.id != '0'}">
+													<div class="form-check">
+														<div th:if="${staff.gender == 'male'}">
+															<div class="radio1">
+																<label class="form-check-label ">
+																	<input type="radio" id="gender" th:field="*{gender}"
+																		value="male" th:checked="true"
+																		class="form-check-input">Male
+																</label>
+															</div>
+															<div class="radio2">
+																<label class="form-check-label ">
+																	<input type="radio" id="gender" th:field="*{gender}"
+																		value="female" class="form-check-input">Female
+																</label>
+															</div>
+														</div>
+														<div th:if="${staff.gender == 'female'}">
+															<div class="radio1">
+																<label class="form-check-label ">
+																	<input type="radio" id="gender" th:field="*{gender}"
+																		value="male" class="form-check-input">Male
+																</label>
+															</div>
+															<div class="radio2">
+																<label class="form-check-label ">
+																	<input type="radio" id="gender" th:field="*{gender}"
+																		value="female" th:checked="true"
+																		class="form-check-input">Female
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col col-md-9" th:unless="${staff.id != '0'}">
 													<div class="form-check">
 														<div class="radio">
 															<label for="radio1" class="form-check-label ">
 																<input type="radio" id="gender" th:field="*{gender}"
-																	value="male" class="form-check-input">Male
+																	value="male" th:checked="true"
+																	class="form-check-input">Male
 															</label>
 														</div>
 														<div class="radio">
@@ -165,8 +206,8 @@
 											id="btn-submit-form">
 											<i class="fa fa-dot-circle-o"></i> Edit
 										</button>
-										<button th:if="${staff.id == '0'}" type="submit"
-											class="btn btn-primary btn-sm" id="btn-submit-form">
+										<button th:if="${staff.id == '0'}" type="submit" class="btn btn-primary btn-sm"
+											id="btn-submit-form">
 											<i class="fa fa-dot-circle-o"></i> Add
 										</button>
 										<button type="reset" class="btn btn-danger btn-sm" id="btn-reset">
@@ -192,12 +233,8 @@
 	<div th:replace='component/script :: html_script'></div>
 	<script>
 		function validateEmail(input) {
-			let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+			let validRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 			return validRegex.test(input);
-		}
-		function validateNumber(input) {
-			let validRegex = /^\d+$/;
-			return validRegex.test(input)
 		}
 		function validatePhone(input) {
 			let validRegex = /(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})\b/;
@@ -206,10 +243,14 @@
 		}
 		function validateInput() {
 
-			$("#email").change(function () {
+			$("#email").blur(function () {
 				let email = $("#email").val();
+				if (!email) {
+					$("#email").css("border", "1px solid red");
+					$("#email-error").html("Please enter your email").css("color", "red !important")
+				}
 				// Validate email
-				if (validateEmail(email) || email === "") {
+				if (validateEmail(email)) {
 					$("#email").css("border", "1px solid #ced4da");
 					$("#email-error").html("")
 				}
@@ -218,7 +259,7 @@
 			$("#age").change(function () {
 				let age = $("#age").val();
 				// Validate age
-				if ((age >= 0 && age <= 100) || age === "") {
+				if ((age >= 0 && age <= 100) || !age) {
 					$("#age").css("border", "1px solid #ced4da");
 					$("#age-error").html("")
 				}
@@ -226,7 +267,7 @@
 			$("#phone").change(function () {
 				let phone = $("#phone").val();
 				// Validate phone
-				if (validatePhone(phone) || phone === "") {
+				if (validatePhone(phone) || !phone) {
 					$("#phone").css("border", "1px solid #ced4da");
 					$("#phone-error").html("")
 				}
@@ -236,14 +277,25 @@
 				let email = $("#email").val();
 				let phone = $("#phone").val();
 				let age = $("#age").val();
+				let password = $("#password").val();
 				let checkEmail = true;
 				let checkPhone = true;
 				let checkAge = true;
+				let checkPassword = true;
 				// Validate email
-				if (!validateEmail(email) || !email) {
+				if (!email) {
+					$("#email").css("border", "1px solid red");
+					$("#email-error").html("Please enter your email").css("color", "red !important")
+				} else if (!validateEmail(email) || !email) {
 					$("#email").css("border", "1px solid red");
 					$("#email-error").html("Please enter email address in correct format\nexample@gmail.com").css("color", "red !important")
 					checkEmail = false
+				}
+				// Validate email
+				if (!password) {
+					$("#password").css("border", "1px solid red");
+					$("#password-error").html("Please generate password").css("color", "red !important")
+					checkPassword = false
 				}
 				// Validate age
 				if (age) {
@@ -261,7 +313,7 @@
 						checkPhone = false
 					}
 				}
-				if (!checkEmail || !checkPhone || !checkAge) {
+				if (!checkEmail || !checkPhone || !checkAge || !checkPassword) {
 					console.log("Submit fail")
 				} else {
 					$("#form1").submit()
@@ -286,9 +338,12 @@
 				$("#email-error").html("")
 				$("#age-error").html("")
 				$("#phone-error").html("")
+				$("#password").html("")
 				$("#email").css("border", "1px solid #ced4da");
 				$("#phone").css("border", "1px solid #ced4da");
 				$("#age").css("border", "1px solid #ced4da");
+				$("#password-error").css("border", "1px solid #ced4da");
+
 			});
 		}
 		validateInput();

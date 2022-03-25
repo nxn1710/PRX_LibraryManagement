@@ -18,13 +18,13 @@ import com.prx.project.library.model.MemberList;
 @Service
 public class MemberDAO {
 
-	private MemberList unmarshalling() {
+	public MemberList unmarshalling() {
 
 		MemberList members = null;
 		try {
 			JAXBContext context = JAXBContext.newInstance(MemberFactory.class);
 			Unmarshaller unmarshaller = context.createUnmarshaller();
-			File file = new File("D:\\Study\\CN8\\PRX\\PRX_LibraryManagement\\FileXml\\member.xml");
+			File file = new File("FileXml/member.xml");
 			members = (MemberList) unmarshaller.unmarshal(file);
 		} catch (JAXBException ex) {
 			ex.printStackTrace();
@@ -39,7 +39,7 @@ public class MemberDAO {
 			JAXBContext context = JAXBContext.newInstance(MemberFactory.class);
 			Marshaller marshaller = context.createMarshaller();
 
-			File file = new File("D:\\Study\\CN8\\PRX\\PRX_LibraryManagement\\FileXml\\member.xml");
+			File file = new File("FileXml/member.xml");
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			marshaller.marshal(memberList, file);
 
