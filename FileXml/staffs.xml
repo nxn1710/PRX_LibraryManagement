@@ -1,42 +1,94 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <staff_list>
-	<staff id="1">
-
-		<email>nguyennhan123</email>
-		<password>0349769684</password>
-		<fullName>Nguyen Nhan</fullName>
-		<gender>Nguyen Nhan</gender>
-		<age>Nguyen Nhan</age>
-		<phone>
+    <staff id="1">
+        <email>nguyennhan12@gmail</email>
+        <fullName>Nguyen Nhan</fullName>
+        <gender>male</gender>
+        <age></age>
+        <phone>0349769684</phone>
+        <address>63c Thanh Niên</address>
+    </staff>
+    <staff id="2">
+        <email>nguyenchang321</email>
+        <password>0349769684</password>
+        <fullName>Nguyen Chanh</fullName>
+        <gender>female</gender>
+        <age>Nguyen Nhan</age>
+        <phone>
 			1234213
 		</phone>
-		<address>
+        <address>
 			Quang Binh
 		</address>
-	</staff>
-	<staff id="2">
-
-		<email>nguyenchang321</email>
-		<password>0349769684</password>
-		<fullName>Nguyen Chanh</fullName>
-		<age>Nguyen Nhan</age>
-		<phone>
+    </staff>
+    <staff id="3">
+        <email>longtb</email>
+        <password>0349769684</password>
+        <fullName>Long Thai Binh</fullName>
+        <gender>male</gender>
+        <age>Nguyen Nhan</age>
+        <phone>
 			1234213
 		</phone>
-		<address>
+        <address>
 			Quang Binh
 		</address>
-	</staff>
-	<staff id="3">
-		<email>longtb</email>
-		<password>0349769684</password>
-		<fullName>Long Thai Binh</fullName>
-		<age>Nguyen Nhan</age>
-		<phone>
-			1234213
-		</phone>
-		<address>
-			Quang Binh
-		</address>
-	</staff>
+    </staff>
+    <staff id="3">
+        <email>leson2602@gmail.com</email>
+        <password>rsrbwxep</password>
+        <fullName>Ngoc Duc</fullName>
+        <gender>female</gender>
+        <age>23</age>
+        <phone>0349769684</phone>
+        <address>63c Thanh Niên</address>
+    </staff>
+    <staff id="4">
+        <email>leson2602@gmai</email>
+        <fullName></fullName>
+        <gender>female</gender>
+        <age></age>
+        <phone>0349769684</phone>
+        <address>63c Thanh Niên</address>
+    </staff>
+    <staff id="3">
+        <email>dsadas@gmail</email>
+        <fullName></fullName>
+        <gender>female</gender>
+        <age></age>
+        <phone></phone>
+        <address></address>
+    </staff>
+    <staff id="4">
+        <email>leson2602@gmail.c</email>
+        <fullName></fullName>
+        <gender>female</gender>
+        <age></age>
+        <phone>0349769684</phone>
+        <address>63c Thanh Niên</address>
+    </staff>
+    <staff id="3">
+        <email>leson2602@gmail.co</email>
+        <fullName></fullName>
+        <gender>female</gender>
+        <age></age>
+        <phone>0349769684</phone>
+        <address>63c Thanh Niên</address>
+    </staff>
+    <staff id="4">
+        <email>leson2602@gmail.com</email>
+        <fullName></fullName>
+        <gender>female</gender>
+        <age></age>
+        <phone>0349769684</phone>
+        <address>63c Thanh Niên</address>
+    </staff>
+    <staff id="2">
+        <email>leson2602@gmail.com</email>
+        <fullName>Le Duc Son</fullName>
+        <gender>male</gender>
+        <age>20</age>
+        <phone>0349769684</phone>
+        <address>63c Thanh Niên</address>
+    </staff>
 </staff_list>

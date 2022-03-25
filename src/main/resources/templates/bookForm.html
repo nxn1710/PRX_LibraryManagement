@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/css :: html_css">
+
+<body class="animsition">
+	<div class="page-wrapper">
+		<!-- MENU SIDEBAR-->
+		<div th:replace='component/aside :: html_aside'></div>
+		<!-- END MENU SIDEBAR-->
+
+		<!-- PAGE CONTAINER-->
+		<div class="page-container">
+			<!-- HEADER DESKTOP-->
+			<div th:replace='component/header :: html_header'></div>
+			<!-- END HEADER DESKTOP-->
+
+			<!-- MAIN CONTENT-->
+			<div class="main-content">
+				<div class="section__content section__content--p30">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-6" style="margin: 0 auto">
+								<div class="card">
+									<div class="card-header" th:if="${book.id != '0'}">
+										<strong>Edit Form</strong>
+									</div>
+									<div class="card-header" th:if="${book.id == '0'}">
+										<strong>Add Form</strong>
+									</div>
+									<div class="card-body card-block">
+										<form id="form1" action="#" th:action="@{/books/book-add-edit}"
+											th:object="${book}" method="post" enctype="multipart/form-data"
+											class="form-horizontal">
+
+											<input type="text" id="id" th:field="*{id}" name="id" th:value="${book.id}"
+												hidden="true">
+
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label class=" form-control-label">Title</label>
+												</div>
+												<div class="col-12 col-md-9" th:if="${book.id != '0'}">
+													<input type="text" id="title" th:field="*{title}"
+														th:value="${book.title}" placeholder="Title"
+														class="form-control">
+													<small style="color: red;" id="title-error"></small>
+												</div>
+												<div class="col-12 col-md-9" th:unless="${book.id != '0'}">
+													<input type="text" id="title" th:field="*{title}"
+														placeholder="Title" class="form-control">
+													<small style="color: red;" id="title-error"></small>
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input"
+														class=" form-control-label">Description</label>
+												</div>
+												<div class="col-12 col-md-9" th:if="${book.id != '0'}">
+													<input type="text" id="description" th:field="*{description}"
+														th:value="${book.description}" name="description"
+														placeholder="Description" class="form-control">
+												</div>
+												<div class="col-12 col-md-9" th:unless="${book.id != '0'}">
+													<input type="text" id="description" th:field="*{description}"
+														name="description" placeholder="Description"
+														class="form-control">
+												</div>
+
+											</div>
+
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="disabled-input"
+														class=" form-control-label">Price</label>
+												</div>
+												<div class="col-12 col-md-9" th:if="${book.id != '0'}">
+													<input type="text" id="price" th:field="*{price}"
+														th:value="${book.price}" placeholder="Price"
+														class="form-control">
+													<small style="color: red;" id="price-error"></small>
+												</div>
+												<div class="col-12 col-md-9" th:unless="${book.id != '0'}">
+													<input type="text" id="price" th:field="*{price}"
+														placeholder="Price" class="form-control">
+													<small style="color: red;" id="price-error"></small>
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="disabled-input"
+														class=" form-control-label">Author</label>
+												</div>
+												<div class="col-12 col-md-9" th:if="${book.id != '0'}">
+													<select id="author" th:field="*{author}" class="form-control">
+														<option th:each="author : ${authorList}"
+															th:value="${author.name}"
+															th:attr="showselected=(${author.name} == ${book.author})"
+															th:selected="(${author.name} == ${book.author})"
+															th:text="${author.name}"></option>
+													</select>
+												</div>
+												<div class="col-12 col-md-9" th:unless="${book.id != '0'}">
+													<select id="author" th:field="*{author}" class="form-control">
+														<option th:each="author : ${authorList}"
+															th:value="${author.name}" th:text="${author.name}">
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="disabled-input"
+														class=" form-control-label">Category</label>
+												</div>
+												<div class="col-12 col-md-9" th:if="${book.id != '0'}">
+													<select id="category" th:field="*{category}" class="form-control">
+														<option th:each="category : ${categoryList}"
+															th:value="${category.name}"
+															th:attr="showselected=(${category.name} == ${book.category})"
+															th:selected="(${category.name} == ${book.category})"
+															th:text="${category.name}"></option>
+													</select>
+												</div>
+												<div class="col-12 col-md-9" th:unless="${book.id != '0'}">
+													<select id="category" th:field="*{category}" class="form-control">
+														<option th:each="category : ${categoryList}"
+															th:value="${category.name}" th:text="${category.name}">
+														</option>
+													</select>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="card-footer">
+										<button th:if="${book.id != '0'}" type="submit" class="btn btn-primary btn-sm"
+											id="btn-submit-form">
+											<i class="fa fa-dot-circle-o"></i> Edit
+										</button>
+										<button th:if="${book.id == '0'}" type="submit" class="btn btn-primary btn-sm"
+											id="btn-submit-form">
+											<i class="fa fa-dot-circle-o"></i> Add
+										</button>
+										<button type="reset" class="btn btn-danger btn-sm" id="btn-reset">
+											<i class="fa fa-ban"></i> Reset
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="copyright">
+									<p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
+											href="https://colorlib.com">Colorlib</a>.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div th:replace='component/script :: html_script'></div>
+	<script>
+		function validateInput() {
+
+			$("#title").blur(function () {
+				let title = $("#title").val();
+				// Validate email
+				console.log(title)
+				if (!title) {
+					$("#title").css("border", "1px solid red");
+					$("#title-error").html("Please enter book title").css("color", "red !important")
+				}
+			});
+
+			$("#btn-submit-form").click(function () {
+				let title = $("#title").val();
+				let checkSubmitForm = false;
+				// Validate title
+				if (!title) {
+					$("#title").css("border", "1px solid red");
+					$("#title-error").html("Please enter book title").css("color", "red !important")
+					checkSubmitForm = true;
+				}
+				if (!checkSubmitForm) {
+					$("#form1").submit()
+				} else {
+					console.log("Submit fail")
+				}
+			});
+
+			$("#btn-reset").click(function (e) {
+				e.preventDefault();
+				$("#title").val(null);
+				$("#description").val(null);
+				$("#price").val(null);
+				$("#author").val(null);
+				$("#category").val(null);
+				$("#thumbnail").val(null);
+				$("#title").html("")
+				$("#title").css("border", "1px solid #ced4da");
+			});
+		}
+
+		validateInput()
+
+	</script>
+</body>
+
+</html>
+<!-- end document-->
