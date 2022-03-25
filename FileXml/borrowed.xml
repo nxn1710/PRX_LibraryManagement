@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<borrowed_list>
+    <borrowed id="1">
+        <borrowedTime>2021/02/20 12:30:21</borrowedTime>
+        <returnDeadline>2021/03/20 12:30:21</returnDeadline>
+        <totalPrice>200000.0</totalPrice>
+        <member id="1">
+            <name>Nguyen Nhan</name>
+            <gender>Male</gender>
+            <phone>0349769684</phone>
+            <address>Hue</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+            <book id="2">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+            <book id="3">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="2">
+        <borrowedTime>2021/02/20 12:30:21</borrowedTime>
+        <returnDeadline>2021/03/20 12:30:21</returnDeadline>
+        <totalPrice>200000.0</totalPrice>
+        <member id="1">
+            <name>Nguyen Nhan</name>
+            <gender>Male</gender>
+            <phone>0349769684</phone>
+            <address>Hue</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+            <book id="2">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+            <book id="3">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="3">
+        <borrowedTime>2021/02/20 12:30:21</borrowedTime>
+        <returnDeadline>2021/03/20 12:30:21</returnDeadline>
+        <totalPrice>200000.0</totalPrice>
+        <member id="1">
+            <name>Nguyen Nhan</name>
+            <gender>Male</gender>
+            <phone>0349769684</phone>
+            <address>Hue</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+            <book id="2">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+            <book id="3">
+                <title>Agile Web Development with Rails</title>
+                <author>472</author>
+                <price>200</price>
+                <description>ABC</description>
+                <category>Web development</category>
+                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+</borrowed_list>
