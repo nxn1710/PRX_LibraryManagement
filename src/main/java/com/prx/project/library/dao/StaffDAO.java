@@ -66,6 +66,20 @@ public class StaffDAO {
 		return null;
 
 	}
+	
+	public Staff getStaffByUser(String user) {
+
+		StaffList staffList = this.unmarshalling();
+
+		for (Staff staff : staffList.getStaffs()) {
+			if (user.equals(staff.getEmail())) {
+				return staff;
+			}
+		}
+
+		return null;
+
+	}
 
 	public void insertStaff(Staff staff) {
 
