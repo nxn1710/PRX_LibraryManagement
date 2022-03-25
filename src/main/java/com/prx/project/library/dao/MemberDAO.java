@@ -24,7 +24,7 @@ public class MemberDAO {
 		try {
 			JAXBContext context = JAXBContext.newInstance(MemberFactory.class);
 			Unmarshaller unmarshaller = context.createUnmarshaller();
-			File file = new File("FileXml/member.xml");
+			File file = new File("FileXml/members.xml");
 			members = (MemberList) unmarshaller.unmarshal(file);
 		} catch (JAXBException ex) {
 			ex.printStackTrace();

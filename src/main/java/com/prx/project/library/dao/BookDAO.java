@@ -24,7 +24,7 @@ public class BookDAO {
 		try {
 			JAXBContext context = JAXBContext.newInstance(BookFactory.class);
 			Unmarshaller unmarshaller = context.createUnmarshaller();
-			File file = new File("FileXml/book.xml");
+			File file = new File("FileXml/books.xml");
 			books = (BookList) unmarshaller.unmarshal(file);
 		} catch (JAXBException ex) {
 			ex.printStackTrace();

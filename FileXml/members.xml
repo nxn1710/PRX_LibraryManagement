@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<member_list>
+	<member id="1">
+		<name>Le Duc Son</name>
+		<gender>male</gender>
+		<phone>0984323543</phone>
+		<email>sonld@gmail.com</email>
+		<age>22</age>
+		<address>Quang Binh</address>
+	</member>
+	<member id="2">
+		<name>Nguyen Xuan Nghiep</name>
+		<gender>female</gender>
+		<phone>0984323233</phone>
+		<age>23</age>
+		<email>nxn2612@gmail.com</email>
+		<address>Dien Ban - Quang Nam</address>
+	</member>
+	<member id="3">
+		<name>Nguyen Truong Phuc</name>
+		<gender>male</gender>
+		<phone>0984323233</phone>
+		<email>phucnt@gmail.com</email>
+		<age>25</age>
+		<address>Gia Lai</address>
+	</member>
+</member_list>
