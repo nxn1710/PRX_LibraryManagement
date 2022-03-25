@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/css :: html_css">
+
+<body class="animsition">
+	<div class="page-wrapper">
+		<!-- MENU SIDEBAR-->
+		<div th:replace='component/aside :: html_aside'></div>
+		<!-- END MENU SIDEBAR-->
+
+		<!-- PAGE CONTAINER-->
+		<div class="page-container">
+			<!-- HEADER DESKTOP-->
+			<div th:replace='component/header :: html_header'></div>
+			<!-- END HEADER DESKTOP-->
+
+			<!-- MAIN CONTENT-->
+			<div class="main-content">
+				<div class="section__content section__content--p30">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="title-5 m-b-35">data table</h3>
+								<div class="table-data__tool">
+									<div class="table-data__tool-left">										
+									</div>
+									<div class="table-data__tool-right">
+										<a th:href="@{/borrows/new}"><button
+												class="au-btn au-btn-icon au-btn--green au-btn--small">
+												<i class="zmdi zmdi-plus"></i>Create New Borrow</button></a>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row m-t-30">
+							<div class="col-md-12">
+								<!-- DATA TABLE-->
+								<div class="table-responsive m-b-40">
+									<table class="table table-borderless table-data3">
+										<thead>
+											<tr class="text-center">
+												<th>STT</th>
+												<th>ID</th>
+												<th>Borrow Time</th>
+												<th>Return Deadline</th>
+												<th>Total Price</th>
+												<th>Number of Book</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody class="text-center">
+											<tr th:each="borrow,iter : ${listBorrow}">
+												<td th:text="${iter.index + 1}"></td>
+												<td th:text="${borrow.id}"></td>
+												<td th:text="${borrow.borrowedTime}"></td>
+												<td th:text="${borrow.returnDeadline}"></td>
+												<td th:text="${borrow.totalPrice}"></td>
+												<td th:text="${borrow.numberOfBook}"></td>
+												<td>
+													<a th:href="@{'/borrows/' + ${borrow.id}}"><button
+															class="btn btn-primary" data-toggle="tooltip"
+															data-placement="top" title="See Details">
+															See Details</button> </a>
+
+												
+													<a th:href="@{'/borrows/delete/' + ${borrow.id}}">
+														<button class="btn btn-danger" data-toggle="tooltip"
+															data-placement="top" title="Delete">
+															Delete
+														</button></a>
+												</td>
+										</tbody>
+									</table>
+								</div>
+								<!-- END DATA TABLE-->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="copyright">
+									<p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
+											href="https://colorlib.com">Colorlib</a>.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div th:replace='component/script :: html_script'></div>
+</body>

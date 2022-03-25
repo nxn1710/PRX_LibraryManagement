@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<borrowed_list>
+    <borrowed id="4">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-29</returnDeadline>
+        <totalPrice>1285776.0</totalPrice>
+        <member id="1">
+            <name>Bui Viet Hoang</name>
+            <gender>Male</gender>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
+                <description>ABC</description>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+            </book>
+            <book id="2">
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="3">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-28</returnDeadline>
+        <totalPrice>964332.0</totalPrice>
+        <member id="1">
+            <name>Bui Viet Hoang</name>
+            <gender>Male</gender>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
+                <description>ABC</description>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+            </book>
+            <book id="2">
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="4">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-28</returnDeadline>
+        <totalPrice>964332.0</totalPrice>
+        <member id="1">
+            <name>Bui Viet Hoang</name>
+            <gender>Male</gender>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
+                <description>ABC</description>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+            </book>
+            <book id="2">
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="5">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-04-26</returnDeadline>
+        <totalPrice>1.0286208E7</totalPrice>
+        <member id="1">
+            <name>Bui Viet Hoang</name>
+            <gender>Male</gender>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        </member>
+        <book_list>
+            <book id="2">
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
+            </book>
+            <book id="1">
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
+                <description>ABC</description>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="6">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-29</returnDeadline>
+        <totalPrice>1285776.0</totalPrice>
+        <member id="1">
+            <name>Bui Viet Hoang</name>
+            <gender>Male</gender>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
+                <description>ABC</description>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+            </book>
+            <book id="2">
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+</borrowed_list>
