@@ -1,113 +1,152 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <borrowed_list>
-    <borrowed id="1">
-        <borrowedTime>2021/02/20 12:30:21</borrowedTime>
-        <returnDeadline>2021/03/20 12:30:21</returnDeadline>
-        <totalPrice>200000.0</totalPrice>
+    <borrowed id="4">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-29</returnDeadline>
+        <totalPrice>1285776.0</totalPrice>
         <member id="1">
-            <name>Nguyen Nhan</name>
+            <name>Bui Viet Hoang</name>
             <gender>Male</gender>
-            <phone>0349769684</phone>
-            <address>Hue</address>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
         </member>
         <book_list>
             <book id="1">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
                 <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
             </book>
             <book id="2">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
-                <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
-            </book>
-            <book id="3">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
-                <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
-            </book>
-        </book_list>
-    </borrowed>
-    <borrowed id="2">
-        <borrowedTime>2021/02/20 12:30:21</borrowedTime>
-        <returnDeadline>2021/03/20 12:30:21</returnDeadline>
-        <totalPrice>200000.0</totalPrice>
-        <member id="1">
-            <name>Nguyen Nhan</name>
-            <gender>Male</gender>
-            <phone>0349769684</phone>
-            <address>Hue</address>
-        </member>
-        <book_list>
-            <book id="1">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
-                <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
-            </book>
-            <book id="2">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
-                <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
-            </book>
-            <book id="3">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
-                <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
             </book>
         </book_list>
     </borrowed>
     <borrowed id="3">
-        <borrowedTime>2021/02/20 12:30:21</borrowedTime>
-        <returnDeadline>2021/03/20 12:30:21</returnDeadline>
-        <totalPrice>200000.0</totalPrice>
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-28</returnDeadline>
+        <totalPrice>964332.0</totalPrice>
         <member id="1">
-            <name>Nguyen Nhan</name>
+            <name>Bui Viet Hoang</name>
             <gender>Male</gender>
-            <phone>0349769684</phone>
-            <address>Hue</address>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
         </member>
         <book_list>
             <book id="1">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
                 <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
             </book>
             <book id="2">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
-                <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
             </book>
-            <book id="3">
-                <title>Agile Web Development with Rails</title>
-                <author>472</author>
-                <price>200</price>
+        </book_list>
+    </borrowed>
+    <borrowed id="4">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-28</returnDeadline>
+        <totalPrice>964332.0</totalPrice>
+        <member id="1">
+            <name>Bui Viet Hoang</name>
+            <gender>Male</gender>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
                 <description>ABC</description>
-                <category>Web development</category>
-                <thumbnail>http://bookzz.org/dl/1159142/643c75</thumbnail>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+            </book>
+            <book id="2">
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="5">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-04-26</returnDeadline>
+        <totalPrice>1.0286208E7</totalPrice>
+        <member id="1">
+            <name>Bui Viet Hoang</name>
+            <gender>Male</gender>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        </member>
+        <book_list>
+            <book id="2">
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
+            </book>
+            <book id="1">
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
+                <description>ABC</description>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="6">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-29</returnDeadline>
+        <totalPrice>1285776.0</totalPrice>
+        <member id="1">
+            <name>Bui Viet Hoang</name>
+            <gender>Male</gender>
+            <phone>0984323543</phone>
+            <email>hoangbv@gmail.com</email>
+            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Bui Viet Hoang</title>
+                <author>Male</author>
+                <price>321321</price>
+                <description>ABC</description>
+                <category>Seft help</category>
+                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+            </book>
+            <book id="2">
+                <title>XXX</title>
+                <author>Bui Viet Hoang</author>
+                <price>123</price>
+                <description></description>
+                <category>Action</category>
+                <thumbnail></thumbnail>
             </book>
         </book_list>
     </borrowed>

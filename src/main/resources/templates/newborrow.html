@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/css :: html_css">
+
+<body class="animsition">
+	<div class="page-wrapper">
+		<!-- MENU SIDEBAR-->
+		<div th:replace='component/aside :: html_aside'></div>
+		<!-- END MENU SIDEBAR-->
+
+		<!-- PAGE CONTAINER-->
+		<div class="page-container">
+			<!-- HEADER DESKTOP-->
+			<div th:replace='component/header :: html_header'></div>
+			<!-- END HEADER DESKTOP-->
+			<div class="main-content">
+				<div class="section__content section__content--p30">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-10" style="margin: 0 auto">
+								<div class="card">
+
+									<div class="card-body card-block">
+										<form action="/borrows/new" method="post" class="form-horizontal">
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Member
+														ID</label>
+												</div>
+												<div class="col-12 col-md-9">
+													<input type="text" id="memberid" name="memberid"
+														placeholder="Member ID" required class="form-control"
+														onchange="getMemberName()">
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Member
+														Name</label>
+												</div>
+												<div class="col-12 col-md-9">
+													<input type="text" id="membername" name="text-input"
+														placeholder="Member Name" class="form-control" disabled="">
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Borrow
+														Date</label>
+												</div>
+												<div class="col-12 col-md-9">
+													<input type="date" id="borrowdate" name="borrowdate"
+														class="form-control">
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Return
+														Date</label>
+												</div>
+												<div class="col-12 col-md-9">
+													<input type="date" id="returndate" name="returndate"
+														onchange="setNewBorrowDate()" class="form-control">
+												</div>
+											</div>
+											<hr>
+											<p class="status--denied text-center">Note: Maximum one borrow is five books
+											</p>
+											<hr>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Book 1</label>
+												</div>
+												<div class="col-12 col-md-3">
+													<input type="text" id="bookid1" name="bookid1"
+														placeholder="ID Book 1" class="form-control bookid">
+												</div>
+												<div class="col-12 col-md-6">
+													<input type="text" id="bookname1" name="bookname1"
+														placeholder="Name Book 1" class="form-control" disabled="">
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Book 2</label>
+												</div>
+												<div class="col-12 col-md-3">
+													<input type="text" name="bookid2" id="bookid2"
+														placeholder="ID Book 2" class="form-control bookid">
+												</div>
+												<div class="col-12 col-md-6">
+													<input type="text" name="text-input" id="bookname2"
+														placeholder="Name Book 2" class="form-control" disabled="">
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Book 3</label>
+												</div>
+												<div class="col-12 col-md-3">
+													<input type="text" name="bookid3" id="bookid3"
+														placeholder="ID Book 3" class="form-control bookid">
+												</div>
+												<div class="col-12 col-md-6">
+													<input type="text" name="text-input" id="bookname3"
+														placeholder="Name Book 3" class="form-control" disabled="">
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Book 4</label>
+												</div>
+												<div class="col-12 col-md-3">
+													<input type="text" name="bookid4" id="bookid4"
+														placeholder="ID Book 4" class="form-control bookid">
+												</div>
+												<div class="col-12 col-md-6">
+													<input type="text" name="text-input" id="bookname4"
+														placeholder="Name Book 4" class="form-control" disabled="">
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Book 5</label>
+												</div>
+												<div class="col-12 col-md-3">
+													<input type="text" name="bookid5" id="bookid5"
+														placeholder="ID Book 5" class="form-control bookid">
+												</div>
+												<div class="col-12 col-md-6">
+													<input type="text" name="text-input" id="bookname5"
+														placeholder="Name Book 5" class="form-control" disabled="">
+												</div>
+											</div>
+											<div class="row form-group">
+												<div class="col col-md-3">
+													<label for="text-input" class=" form-control-label">Total
+														Price</label>
+												</div>
+												<div class="col-12 col-md-9">
+													<input type="text" id="totalFee"
+														placeholder="Total Fee 5 Book * Number Of Day Borrow"
+														class="form-control" disabled="">
+														<input type="text" name="totalFee" id="totalFee2"
+														placeholder="0"
+														class="form-control" hidden>
+													<span class="help-block">Total Fee 5 Book * Number Of Day
+														Borrow</span>
+												</div>
+											</div>
+											<div class="card-footer">
+												<input type="submit" class="btn btn-primary btn-sm">
+												<i class="fa fa-dot-circle-o"></i> Submit
+												</input>
+											</div>
+										</form>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="copyright">
+									<p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
+											href="https://colorlib.com">Colorlib</a>.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<div th:replace='component/script :: html_script'></div>
+
+	<script>
+
+		let elements = document.getElementsByClassName('bookid');
+		let totalFee = [];
+
+
+
+		let borrowDay = 1;
+		const today = new Date();
+		const yyyy = today.getFullYear();
+		let mm = today.getMonth() + 1; // Months start at 0!
+		let dd = today.getDate();
+
+		if (dd < 10) dd = '0' + dd;
+		if (mm < 10) mm = '0' + mm;
+
+		const todayX = yyyy + '-' + mm + '-' + (dd + 1);
+		document.getElementById('borrowdate').valueAsDate = new Date();
+
+		document.getElementById("returndate").setAttribute("min", todayX);
+		document.getElementById("returndate").valueAsDate = new Date((new Date()).getTime() + 86400000);
+
+
+		function setNewBorrowDate() {
+			let Difference_In_Time = document.getElementById('returndate').valueAsDate.getTime() - document.getElementById("borrowdate").valueAsDate.getTime();
+
+			borrowDay = Difference_In_Time / (1000 * 3600 * 24);
+			caculateTotalFee(totalFee);
+		}
+
+		function getMemberName() {
+
+			let id = document.getElementById('memberid').value;
+			if (id == "") {
+				document.getElementById('membername').value = "";
+			}
+			let href = location.href.replace("/borrows/new", '') + `/member/rest/${id}`
+			$.ajax(href, {
+				success: function (data) {
+					document.getElementById('membername').value = data.name;
+				},
+				error: function () {
+					$('#notification-bar').text('An error occurred');
+				}
+			});
+		}
+
+		var myFunction = function () {
+			let idBook = this.getAttribute("id").replace("bookid", "");
+			let bookname = this.getAttribute("id").replace("bookid", "bookname");
+
+			if (this.value == "" || this.value == undefined) {
+				totalFee = totalFee.filter(item => item.id != idBook);
+				document.getElementById(bookname).value = "";
+				caculateTotalFee(totalFee)
+				return;
+			}
+			let href = location.href.replace("/borrows/new", '') + `/book/rest/${this.value}`
+
+
+			let elm = this;
+
+			$.ajax(href, {
+				success: function (data) {
+					if (!data) {
+						document.getElementById(bookname).value = "";
+						window.alert("Could not found any book")
+						elm.value = "";
+						totalFee = totalFee.filter(item => item.id != idBook);
+						caculateTotalFee(totalFee)
+						return;
+					}
+					totalFee.push({"id": idBook, "price": data.price})
+					caculateTotalFee(totalFee)
+					document.getElementById(bookname).value = data.title;
+				},
+				error: function () {
+					$('#notification-bar').text('An error occurred');
+				}
+			});
+
+		};
+
+		for (var i = 0; i < elements.length; i++) {
+			elements[i].addEventListener('change', myFunction, false);
+		}
+
+		function caculateTotalFee(totalFee) {
+			total = 0;
+			totalFee.forEach(item => {
+				total += item.price * borrowDay;
+			});
+			document.getElementById("totalFee").value = total;
+			document.getElementById("totalFee2").value = total;
+		}
+
+	</script>
+
+</body>
+
+</html>
+<!-- end document-->

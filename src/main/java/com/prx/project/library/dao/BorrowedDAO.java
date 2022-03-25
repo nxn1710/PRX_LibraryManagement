@@ -86,6 +86,24 @@ public class BorrowedDAO {
 		this.marshalling(borrowedList);
 
 	}
+	
+	public Borrowed get(String borrowedId) {
+
+		BorrowedList borrowedList = this.unmarshalling();
+
+		if (borrowedId == null || borrowedList == null || borrowedList.getBorrowedList().isEmpty()) {
+			return null;
+		}
+
+		for (Borrowed b : borrowedList.getBorrowedList()) {
+			if (borrowedId.equals(b.getId())) {
+
+				return b;
+			}
+		}
+		return null;
+
+	}
 
 	public List<Borrowed> getAllBorrowed() {
 		return this.unmarshalling().getBorrowedList();

@@ -80,6 +80,13 @@ public class Borrowed {
 		this.books = books;
 	}
 	
+	public int getNumberOfBook() {
+		if (books.getBook() == null) {
+			return 0;
+		}
+		return books.getBook().size();
+	}
+	
 	
 	
 
