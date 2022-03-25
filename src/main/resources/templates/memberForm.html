@@ -186,9 +186,7 @@
 											id="btn-submit-form">
 											<i class="fa fa-dot-circle-o"></i> Add
 										</button>
-										<button type="reset" class="btn btn-danger btn-sm" id="btn-reset">
-											<i class="fa fa-ban"></i> Reset
-										</button>
+										
 									</div>
 								</div>
 							</div>
@@ -294,20 +292,7 @@
 				$("#password").css("border", "1px solid #ced4da");
 				$("#password-error").html("")
 			});
-			$("#btn-reset").click(function (e) {
-				e.preventDefault();
-				$("#email").val(null);
-				$("#password").val(null);
-				$("#name").val(null);
-				$("#gender").val(null);
-				$("#phone").val(null);
-				$("#address").val(null);
-				$("#email-error").html("")
-				$("#phone-error").html("")
-				$("#email").css("border", "1px solid #ced4da");
-				$("#phone").css("border", "1px solid #ced4da");
-
-			});
+			
 		}
 		validateInput();
 	</script>

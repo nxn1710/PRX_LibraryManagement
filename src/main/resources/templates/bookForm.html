@@ -142,9 +142,6 @@
 											id="btn-submit-form">
 											<i class="fa fa-dot-circle-o"></i> Add
 										</button>
-										<button type="reset" class="btn btn-danger btn-sm" id="btn-reset">
-											<i class="fa fa-ban"></i> Reset
-										</button>
 									</div>
 								</div>
 							</div>
@@ -188,19 +185,6 @@
 				} else {
 					console.log("Submit fail")
 				}
-			});
-
-			$("#btn-reset").click(function (e) {
-				e.preventDefault();
-				$("#title").val(null);
-				$("#description").val(null);
-				$("#price").val(null);
-				$("#author").val(null);
-				$("#category").val(null);
-				$("#thumbnail").val(null);
-				$("#title").css("border", "1px solid #ced4da");
-				$("#title-error").html("")
-
 			});
 		}
 

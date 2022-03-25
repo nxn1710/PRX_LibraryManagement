@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<book_list>
+	<book id="1">
+		<title>Agile Web Development with Rails</title>
+		<author>Peter</author>
+		<price>10000</price>
+		<description>Rails is a full-stack, open source web framework that
+			enables you to create full-featured</description>
+		<category>Python</category>
+		<thumbnail></thumbnail>
+	</book>
+	<book id="2">
+		<title>Spring Boot Framework</title>
+		<author>Jacee</author>
+		<price>30000</price>
+		<description>A guide to the topics required for state of the art Web development</description>
+		<category>Computers</category>
+		<thumbnail></thumbnail>
+	</book>
+	<book id="3">
+		<title>Beginning PHP 6, Apache, MySQL 6 Web Development</title>
+		<author>Timothy Boronczyk</author>
+		<price>250000</price>
+		<description>Don't spend your time wading through manuals to learn PHP 5. Spend it doing what you do best</description>
+		<category>Software Development</category>
+		<thumbnail></thumbnail>
+	</book>
+</book_list>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <category_list>
 	<category id="1">
-		<name>Action</name>
+		<name>Software Development</name>
 	</category>
 	<category id="2">
-		<name>Web App</name>
+		<name>Computers</name>
 	</category>
 	<category id="3">
-		<name>Mobile App</name>
+		<name>Python</name>
 	</category>
 </category_list>
