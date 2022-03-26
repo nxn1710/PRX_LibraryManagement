@@ -55,16 +55,6 @@ public class BorrowedDAO {
 
 		BorrowedList borrowedList = this.unmarshalling();
 
-		Borrowed maxIdBorrow = borrowedList.getBorrowedList().stream().max(Comparator.comparing(String::valueOf)).get();
-		int maxId = 0;
-		if (maxIdBorrow != null) {
-			maxId = Integer.parseInt(maxIdBorrow.getId());
-		}
-
-		maxId++;
-
-		borrow.setId(String.valueOf(maxId));
-
 		borrowedList.getBorrowedList().add(borrow);
 
 		this.marshalling(borrowedList);

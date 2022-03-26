@@ -1,151 +1,177 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <borrowed_list>
-    <borrowed id="4">
+    <borrowed id="1">
         <borrowedTime>2022-03-25</borrowedTime>
         <returnDeadline>2022-03-29</returnDeadline>
-        <totalPrice>1285776.0</totalPrice>
-        <member id="1">
-            <name>Bui Viet Hoang</name>
-            <gender>Male</gender>
-            <phone>0984323543</phone>
-            <email>hoangbv@gmail.com</email>
-            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        <totalPrice>20000.0</totalPrice>
+        <member id="2">
+            <name>Nguyen Xuan Nghiep</name>
+            <gender>female</gender>
+            <phone>0984323233</phone>
+            <age>23</age>
+            <email>nxn2612@gmail.com</email>
+            <address>Dien Ban - Quang Nam</address>
         </member>
         <book_list>
             <book id="1">
-                <title>Bui Viet Hoang</title>
-                <author>Male</author>
-                <price>321321</price>
-                <description>ABC</description>
-                <category>Seft help</category>
-                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+                <title>Agile Web Development with Rails</title>
+                <author>Peter</author>
+                <price>10000</price>
+                <description>Rails is a full-stack, open source web framework that
+				enables you to create full-featured</description>
+                <category>Python</category>
+                <thumbnail></thumbnail>
             </book>
             <book id="2">
-                <title>XXX</title>
-                <author>Bui Viet Hoang</author>
-                <price>123</price>
-                <description></description>
-                <category>Action</category>
+                <title>Spring Boot Framework</title>
+                <author>Jacee</author>
+                <price>30000</price>
+                <description>A guide to the topics required for state of the art Web development</description>
+                <category>Computers</category>
+                <thumbnail></thumbnail>
+            </book>
+        </book_list>
+    </borrowed>
+    <borrowed id="2">
+        <borrowedTime>2022-03-25</borrowedTime>
+        <returnDeadline>2022-03-29</returnDeadline>
+        <totalPrice>20000.0</totalPrice>
+        <member id="3">
+            <name>Nguyen Truong Phuc</name>
+            <gender>male</gender>
+            <phone>0984323233</phone>
+            <age>25</age>
+            <email>phucnt@gmail.com</email>
+            <address>Gia Lai</address>
+        </member>
+        <book_list>
+            <book id="1">
+                <title>Agile Web Development with Rails</title>
+                <author>Peter</author>
+                <price>10000</price>
+                <description>Rails is a full-stack, open source web framework that
+				enables you to create full-featured</description>
+                <category>Python</category>
+                <thumbnail></thumbnail>
+            </book>
+            <book id="2">
+                <title>Spring Boot Framework</title>
+                <author>Jacee</author>
+                <price>30000</price>
+                <description>A guide to the topics required for state of the art Web development</description>
+                <category>Computers</category>
                 <thumbnail></thumbnail>
             </book>
         </book_list>
     </borrowed>
     <borrowed id="3">
         <borrowedTime>2022-03-25</borrowedTime>
-        <returnDeadline>2022-03-28</returnDeadline>
-        <totalPrice>964332.0</totalPrice>
+        <returnDeadline>2022-03-29</returnDeadline>
+        <totalPrice>20000.0</totalPrice>
         <member id="1">
-            <name>Bui Viet Hoang</name>
-            <gender>Male</gender>
+            <name>Le Duc Son</name>
+            <gender>female</gender>
             <phone>0984323543</phone>
-            <email>hoangbv@gmail.com</email>
-            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+            <age>22</age>
+            <email>sonld@gmail.com</email>
+            <address>Quang Binh</address>
         </member>
         <book_list>
             <book id="1">
-                <title>Bui Viet Hoang</title>
-                <author>Male</author>
-                <price>321321</price>
-                <description>ABC</description>
-                <category>Seft help</category>
-                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+                <title>Agile Web Development with Rails</title>
+                <author>Peter</author>
+                <price>10000</price>
+                <description>Rails is a full-stack, open source web framework that
+				enables you to create full-featured</description>
+                <category>Python</category>
+                <thumbnail></thumbnail>
             </book>
             <book id="2">
-                <title>XXX</title>
-                <author>Bui Viet Hoang</author>
-                <price>123</price>
-                <description></description>
-                <category>Action</category>
+                <title>Spring Boot Framework</title>
+                <author>Jacee</author>
+                <price>30000</price>
+                <description>A guide to the topics required for state of the art Web development</description>
+                <category>Computers</category>
                 <thumbnail></thumbnail>
             </book>
         </book_list>
     </borrowed>
     <borrowed id="4">
-        <borrowedTime>2022-04-25</borrowedTime>
-        <returnDeadline>2022-03-28</returnDeadline>
-        <totalPrice>964332.0</totalPrice>
-        <member id="1">
-            <name>Bui Viet Hoang</name>
-            <gender>Male</gender>
-            <phone>0984323543</phone>
-            <email>hoangbv@gmail.com</email>
-            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        <borrowedTime>2022-03-26</borrowedTime>
+        <returnDeadline>2022-03-27</returnDeadline>
+        <totalPrice>290000.0</totalPrice>
+        <member id="2">
+            <name>Nguyen Xuan Nghiep</name>
+            <gender>female</gender>
+            <phone>0984323233</phone>
+            <age>23</age>
+            <email>nxn2612@gmail.com</email>
+            <address>Dien Ban - Quang Nam</address>
         </member>
         <book_list>
             <book id="1">
-                <title>Bui Viet Hoang</title>
-                <author>Male</author>
-                <price>321321</price>
-                <description>ABC</description>
-                <category>Seft help</category>
-                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
+                <title>Agile Web Development with Rails</title>
+                <author>Peter</author>
+                <price>10000</price>
+                <description>Rails is a full-stack, open source web framework that
+			enables you to create full-featured</description>
+                <category>Python</category>
+                <thumbnail></thumbnail>
             </book>
             <book id="2">
-                <title>XXX</title>
-                <author>Bui Viet Hoang</author>
-                <price>123</price>
-                <description></description>
-                <category>Action</category>
+                <title>Spring Boot Framework</title>
+                <author>Jacee</author>
+                <price>30000</price>
+                <description>A guide to the topics required for state of the art Web development</description>
+                <category>Computers</category>
+                <thumbnail></thumbnail>
+            </book>
+            <book id="3">
+                <title>Beginning PHP 6, Apache, MySQL 6 Web Development</title>
+                <author>Timothy Boronczyk</author>
+                <price>250000</price>
+                <description>Don't spend your time wading through manuals to learn PHP 5. Spend it doing what you do best</description>
+                <category>Software Development</category>
                 <thumbnail></thumbnail>
             </book>
         </book_list>
     </borrowed>
     <borrowed id="5">
-        <borrowedTime>2022-04-25</borrowedTime>
-        <returnDeadline>2022-04-26</returnDeadline>
-        <totalPrice>1.0286208E7</totalPrice>
-        <member id="1">
-            <name>Bui Viet Hoang</name>
-            <gender>Male</gender>
-            <phone>0984323543</phone>
-            <email>hoangbv@gmail.com</email>
-            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
+        <borrowedTime>2022-03-26</borrowedTime>
+        <returnDeadline>2022-03-27</returnDeadline>
+        <totalPrice>290000.0</totalPrice>
+        <member id="2">
+            <name>Nguyen Xuan Nghiep</name>
+            <gender>female</gender>
+            <phone>0984323233</phone>
+            <age>23</age>
+            <email>nxn2612@gmail.com</email>
+            <address>Dien Ban - Quang Nam</address>
         </member>
         <book_list>
-            <book id="2">
-                <title>XXX</title>
-                <author>Bui Viet Hoang</author>
-                <price>123</price>
-                <description></description>
-                <category>Action</category>
+            <book id="1">
+                <title>Agile Web Development with Rails</title>
+                <author>Peter</author>
+                <price>10000</price>
+                <description>Rails is a full-stack, open source web framework that
+			enables you to create full-featured</description>
+                <category>Python</category>
                 <thumbnail></thumbnail>
             </book>
-            <book id="1">
-                <title>Bui Viet Hoang</title>
-                <author>Male</author>
-                <price>321321</price>
-                <description>ABC</description>
-                <category>Seft help</category>
-                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
-            </book>
-        </book_list>
-    </borrowed>
-    <borrowed id="6">
-        <borrowedTime>2022-04-25</borrowedTime>
-        <returnDeadline>2022-03-29</returnDeadline>
-        <totalPrice>1285776.0</totalPrice>
-        <member id="1">
-            <name>Bui Viet Hoang</name>
-            <gender>Male</gender>
-            <phone>0984323543</phone>
-            <email>hoangbv@gmail.com</email>
-            <address>Xuan Dinh - Tu Liem - Ha Noi</address>
-        </member>
-        <book_list>
-            <book id="1">
-                <title>Bui Viet Hoang</title>
-                <author>Male</author>
-                <price>321321</price>
-                <description>ABC</description>
-                <category>Seft help</category>
-                <thumbnail>Xuan Dinh - Tu Liem - Ha Noi</thumbnail>
-            </book>
             <book id="2">
-                <title>XXX</title>
-                <author>Bui Viet Hoang</author>
-                <price>123</price>
-                <description></description>
-                <category>Action</category>
+                <title>Spring Boot Framework</title>
+                <author>Jacee</author>
+                <price>30000</price>
+                <description>A guide to the topics required for state of the art Web development</description>
+                <category>Computers</category>
+                <thumbnail></thumbnail>
+            </book>
+            <book id="3">
+                <title>Beginning PHP 6, Apache, MySQL 6 Web Development</title>
+                <author>Timothy Boronczyk</author>
+                <price>250000</price>
+                <description>Don't spend your time wading through manuals to learn PHP 5. Spend it doing what you do best</description>
+                <category>Software Development</category>
                 <thumbnail></thumbnail>
             </book>
         </book_list>

@@ -79,6 +79,7 @@
 												<div class="col-12 col-md-6">
 													<input type="text" id="bookname1" name="bookname1"
 														placeholder="Name Book 1" class="form-control" disabled="">
+													<span class="help-block" id="price1"></span>
 												</div>
 											</div>
 											<div class="row form-group">
@@ -92,7 +93,9 @@
 												<div class="col-12 col-md-6">
 													<input type="text" name="text-input" id="bookname2"
 														placeholder="Name Book 2" class="form-control" disabled="">
+														<span class="help-block" id="price2"></span>
 												</div>
+												
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
@@ -105,7 +108,9 @@
 												<div class="col-12 col-md-6">
 													<input type="text" name="text-input" id="bookname3"
 														placeholder="Name Book 3" class="form-control" disabled="">
+														<span class="help-block" id="price3"></span>
 												</div>
+												
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
@@ -118,7 +123,9 @@
 												<div class="col-12 col-md-6">
 													<input type="text" name="text-input" id="bookname4"
 														placeholder="Name Book 4" class="form-control" disabled="">
+														<span class="help-block" id="price4"></span>
 												</div>
+												
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
@@ -131,7 +138,9 @@
 												<div class="col-12 col-md-6">
 													<input type="text" name="text-input" id="bookname5"
 														placeholder="Name Book 5" class="form-control" disabled="">
+														<span class="help-block" id="price5"></span>
 												</div>
+												
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
@@ -225,10 +234,13 @@
 		var myFunction = function () {
 			let idBook = this.getAttribute("id").replace("bookid", "");
 			let bookname = this.getAttribute("id").replace("bookid", "bookname");
+			let priceid = this.getAttribute("id").replace("bookid", "price");
+			console.log(priceid)
 
 			if (this.value == "" || this.value == undefined) {
 				totalFee = totalFee.filter(item => item.id != idBook);
 				document.getElementById(bookname).value = "";
+				document.getElementById(priceid).textContent = "";
 				caculateTotalFee(totalFee)
 				return;
 			}
@@ -241,6 +253,7 @@
 				success: function (data) {
 					if (!data) {
 						document.getElementById(bookname).value = "";
+						document.getElementById(priceid).textContent = "";
 						window.alert("Could not found any book")
 						elm.value = "";
 						totalFee = totalFee.filter(item => item.id != idBook);
@@ -250,6 +263,7 @@
 					totalFee.push({"id": idBook, "price": data.price})
 					caculateTotalFee(totalFee)
 					document.getElementById(bookname).value = data.title;
+					document.getElementById(priceid).textContent = "Borrow Fee: " + data.price;
 				},
 				error: function () {
 					$('#notification-bar').text('An error occurred');
