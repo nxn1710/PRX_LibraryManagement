@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <staff_list>
     <staff id="1">
-        <email>nguyennhan20@gmail</email>
+        <email>nguyennhan20@gmail.com</email>
         <password>123123</password>
         <fullName>Nguyen Nhan</fullName>
-        <gender>male</gender>
+        <gender>female</gender>
         <age>30</age>
         <phone>0349769684</phone>
         <address>63c Thanh Niên - Hue</address>
+    </staff>
+    <staff id="2">
+        <email>phuchell@gmail.com</email>
+        <password>123123</password>
+        <fullName>Phuc Hell</fullName>
+        <gender>male</gender>
+        <age>2</age>
+        <phone>0354264848</phone>
+        <address>DN</address>
     </staff>
 </staff_list>

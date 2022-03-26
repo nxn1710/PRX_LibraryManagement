@@ -39,7 +39,7 @@ public class MemberDAO {
 			JAXBContext context = JAXBContext.newInstance(MemberFactory.class);
 			Marshaller marshaller = context.createMarshaller();
 
-			File file = new File("FileXml/member.xml");
+			File file = new File("FileXml/members.xml");
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			marshaller.marshal(memberList, file);
 

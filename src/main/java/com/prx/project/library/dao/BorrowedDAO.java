@@ -1,7 +1,11 @@
 package com.prx.project.library.dao;
 
 import java.io.File;
+import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
@@ -86,7 +90,7 @@ public class BorrowedDAO {
 		this.marshalling(borrowedList);
 
 	}
-	
+
 	public Borrowed get(String borrowedId) {
 
 		BorrowedList borrowedList = this.unmarshalling();
@@ -107,5 +111,29 @@ public class BorrowedDAO {
 
 	public List<Borrowed> getAllBorrowed() {
 		return this.unmarshalling().getBorrowedList();
+	}
+
+	public BigDecimal getTotalMoney() {
+		List<Borrowed> list = this.getAllBorrowed();
+
+		BigDecimal totalMoney = BigDecimal.ZERO;
+
+		for (Borrowed bro : list) {
+			Date rentDate = new Date();
+			try {
+				rentDate = new SimpleDateFormat("yyyy-MM-dd").parse(bro.getBorrowedTime());
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+			Date currentDate = new Date();
+
+			if (rentDate.getYear() == currentDate.getYear() && currentDate.getMonth() - rentDate.getMonth() == 0) {
+				totalMoney = totalMoney.add(new BigDecimal(bro.getTotalPrice()));
+			}
+
+		}
+
+		return totalMoney;
+
 	}
 }
